@@ -4,10 +4,17 @@
 
 “Drakens Sked” is a Vue 3 single-page application built with Vite that functions as a dynamic recipe browser. Users can explore a grid of recipe cards loaded from a local JSON file (`meal.json`), click into individual recipes to see ingredients and instructions, and navigate step-by-step through each recipe via a flip-book–style interface. The project was developed in the context of a JavaScript with Frameworks course (LABB 3) and followed an agile, collaborative workflow.
 
-<video width="640" controls>
-  <source src="images/Drakens_sked.mp4" type="video/mp4">
-  Your Browser do not support  <code>video</code>.
-</video>
+Users can view detailed ingredients and instructions, then flip through each recipe step in a book-like interface.
+
+Two nutrition-based mini-games:
+
+A Quiz on food and nutrition
+
+A Memory game matching food images or ingredients
+
+Multi-criteria filtering (e.g., “Easy” + “Lunch”)
+
+Persisted user data: saves initial username and favorite meal in localStorage
 
 ---
 
@@ -151,6 +158,19 @@ UserFlow:
      - Adjusted Sass styles and media queries for fluid, responsive layouts.
      - In Sprint 2, focused on reactivity issues when navigating between routes via UI buttons and browser navigation arrows. Added watchers to handle `to.name === 'Recept'` and `to.name === 'PlayReceptView'`, triggering the correct visibility toggles.
 
+- **localStorage usage**: The application checks localStorage on mount to auto-fill username and favorite meal. If these keys
+  (userName and favoriteMeal) exist, the user is greeted and the favorite meal filter is pre-selected.
+
+- **Filtering logic**:
+
+  FilterPanel.vue uses v-model for selectedDifficulties and selectedMealTypes.
+
+  A computed property filteredRecipes returns only recipes matching all active filters.
+
+- **Game assets**: Quiz questions and memory card images are stored locally in src/assets/games/.
+
+- **Flip-book library**: The logic in PlayReceptView.vue calls setupPageInteraction() on mounted() to create the book-like page-turn experience, with custom CSS media queries for mobile, tablet, and desktop.
+
 4. **UX/UI Highlights**
 
    - **Notebook-Style Design**: Each recipe and each instruction page render over a notebook-like background (inspired by a CodePen), reinforcing the feel of a digital cookbook.
@@ -182,14 +202,13 @@ UserFlow:
 
 7. **Outcomes and Learnings**
 
-   - The project fulfills all G and VG course requirements:
-     - **Web Service Calls**: Although the data source is local JSON, the team demonstrated data parsing and dynamic rendering.
-     - **Text Interpolation & Attribute Binding**: Extensive use of `{{ }}`, `v-bind:src`, and `:to="{ }"` for dynamic URLs.
-     - **Conditional & List Rendering**: Used `v-if` and `v-for` to render recipe lists and instruction steps.
-     - **Event Handling & v-model**: Employed form inputs, click handlers, and two-way binding for any search or user inputs.
-     - **Vue Router with Dynamic & Nested Routes**: The `/recepts/:receptId/steps` structure demonstrates mastery of dynamic and nested routing.
-     - **Props & Computed/Watch**: Components receive typed props; computed properties format data; watchers on `$route` trigger data reloads.
-     - **Custom Events**: Emitted `handlePlayReceptBack` events between child and parent to toggle views.
+   - **Web Service Calls**: Although the data source is local JSON, the team demonstrated data parsing and dynamic rendering.
+   - **Text Interpolation & Attribute Binding**: Extensive use of `{{ }}`, `v-bind:src`, and `:to="{ }"` for dynamic URLs.
+   - **Conditional & List Rendering**: Used `v-if` and `v-for` to render recipe lists and instruction steps.
+   - **Event Handling & v-model**: Employed form inputs, click handlers, and two-way binding for any search or user inputs.
+   - **Vue Router with Dynamic & Nested Routes**: The `/recepts/:receptId/steps` structure demonstrates mastery of dynamic and nested routing.
+   - **Props & Computed/Watch**: Components receive typed props; computed properties format data; watchers on `$route` trigger data reloads.
+   - **Custom Events**: Emitted `handlePlayReceptBack` events between child and parent to toggle views.
    - Creating wireframes and user flows in Figma helped the team clarify the app’s architecture before coding.
    - Gained real-world experience collaborating in a team, resolving Git conflicts, and maintaining a stable main branch.
    - Deepened understanding of Vue Router, dynamic routes, local data handling, watchers, and component reusability.
