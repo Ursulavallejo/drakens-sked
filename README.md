@@ -16,9 +16,7 @@ Multi-criteria filtering (e.g., “Easy” + “Lunch”)
 
 Persisted user data: saves initial username and favorite meal in localStorage
 
-
 https://github.com/user-attachments/assets/1f1f6abd-98bd-495d-95cf-f8888bdadfff
-
 
 ---
 
@@ -52,6 +50,36 @@ WireFrames:
 UserFlow:
 
 [<img src="images/useflow.jpg" width="550"/>](UserFlow)
+
+Final Result:
+
+[<img src="images/landingPageView_Nouser.png" width="550"/>](landing-page-no-user)
+
+[<img src="images/landingPageView_user_menu.png" width="550"/>](landing-page-user-menu)
+
+[<img src="images/mainRecepies.png" width="550"/>](recepies-page)
+
+[<img src="images/filterSearchView.png" width="550"/>](filter-recepies-page)
+
+[<img src="images/receptCardView.png" width="550"/>](recept-card)
+
+[<img src="images/stepsReceptBook.png" width="550"/>](recept-steps-book)
+
+[<img src="images/favoriteRecept.png" width="550"/>](favorite-recept)
+
+[<img src="images/informationView.png" width="550"/>](information-page)
+
+[<img src="images/introGamesPage.png" width="550"/>](games-page)
+
+[<img src="images/memoryPage.png" width="550"/>](memory-page)
+
+[<img src="images/quiz-intro.png" width="550"/>](Quiz-intro-page)
+
+[<img src="images/quizGame.png" width="550"/>](Quiz-page)
+
+[<img src="images/aboutUsPage.png" width="550"/>](about-page)
+
+[<img src="images/contactPage.png" width="550"/>](contact-page)
 
 ---
 
