@@ -6,7 +6,7 @@
 
 <video width="640" controls>
   <source src="images/Drakens_sked.mp4" type="video/mp4">
-  Tu navegador no soporta el elemento <code>video</code>.
+  Your Browser do not support  <code>video</code>.
 </video>
 
 ---
