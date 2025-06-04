@@ -16,6 +16,10 @@ Multi-criteria filtering (e.g., “Easy” + “Lunch”)
 
 Persisted user data: saves initial username and favorite meal in localStorage
 
+
+https://github.com/user-attachments/assets/1f1f6abd-98bd-495d-95cf-f8888bdadfff
+
+
 ---
 
 ### 🛠️ Technologies Used
