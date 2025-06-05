@@ -1,4 +1,5 @@
 #### March 2024
+#### The development team behind Drakens Sked: Manouella Papadopoulos, Vigan Kumnova, Maja Lennevi, Vanessa Huynh, and Ursula Vallejo.
 
 **Project Summary**
 
